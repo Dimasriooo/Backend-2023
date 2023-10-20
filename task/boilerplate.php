@@ -3,39 +3,36 @@
 # membuat class Animal
 class Animal
 {
-    # property animals
-    
+    private $animals = [];
 
-    # method constructor - mengisi data awal
-    # parameter: data hewan (array)
-    public function __construct($data)
+    public function __construct()
     {
+        $this->animals = ["Ayam", "Ikan"];
     }
 
-    # method index - menampilkan data animals
     public function index()
     {
-        # gunakan foreach untuk menampilkan data animals (array)
+        $no = 0;
+        foreach ($this->animals as $animal) {
+            echo "\n" . ++$no . "." . $animal;
+            
+        };
     }
 
-    # method store - menambahkan hewan baru
-    # parameter: hewan baru
     public function store($data)
     {
-        # gunakan method array_push untuk menambahkan data baru
+        array_push($this->animals, $data);
     }
 
-    # method update - mengupdate hewan
-    # parameter: index dan hewan baru
     public function update($index, $data)
     {
+        $this->animals[$index] = $data;
     }
 
-    # method delete - menghapus hewan
-    # parameter: index
+
     public function destroy($index)
     {
-        # gunakan method unset atau array_splice untuk menghapus data array
+        unset($this->animals[$index]);
     }
 }
 
