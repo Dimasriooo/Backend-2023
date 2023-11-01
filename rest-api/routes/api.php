@@ -33,6 +33,11 @@ Route::put('/animals', [AnimalController::class, 'update']);
 Route::delete('/animals', [AnimalController::class, 'destroy']);
 
 
-//membuat route students dengan method get
-Route::get('/students', [StudentController::class, 'index']);
+//membuat route student
+Route::get("/students", [StudentController::class, "index"]);
+//method post
 Route::post('/students', [StudentController::class, 'store']);
+//method put
+Route::put('/students/{id}', [StudentController::class, 'update']);
+//method delete
+Route::delete('/students/{id}', [StudentController::class, 'destroy']);
