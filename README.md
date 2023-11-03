@@ -1,3 +1,3 @@
-# PERTEMUAN & PRAKTIKUM 5
+# PERTEMUAN 6 & PRAKTIKUM 6
 
-    Building and Testing RESTful API (1)
+    Building and Testing RESTful API (2)
