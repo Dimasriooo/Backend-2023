@@ -34,28 +34,38 @@ class StudentController extends Controller
     public function store(Request $request)
     {
         // validasi data request
-        $request->validate([
+        $validateData = $request->validate([
             "nama"=> "required",
             "nim"=> "required",
             "email"=> "required",
             "jurusan"=> "required"
         ]);
 
-        $input = [
-            'nama' => $request->nama,
-            'nim' => $request->nim,
-            'email' => $request->email,
-            'jurusan' => $request-> jurusan
-        ];
-
-        $student = Student::create($input);
+        //menggunakan model Student untuk insert data
+        $student = Student::create($validateData);
 
         $data = [
-            'message' => 'Data berhasil ditambahkan',
+            'message' => 'Student is created successfully',
             'data' => $student,
         ];
 
         return response()->json($data, 201);
+
+        // $input = [
+        //     'nama' => $request->nama,
+        //     'nim' => $request->nim,
+        //     'email' => $request->email,
+        //     'jurusan' => $request-> jurusan
+        // ];
+
+        // $student = Student::create($input);
+
+        // $data = [
+        //     'message' => 'Data berhasil ditambahkan',
+        //     'data' => $student,
+        // ];
+
+        // return response()->json($data, 201);
     }
 
     public function update(Request $request, $id){
@@ -127,4 +137,5 @@ class StudentController extends Controller
         return response()->json($data, 404);
         }
     }
+
 }
