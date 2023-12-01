@@ -1,4 +1,3 @@
-# pertemuan 8 & praktikum 8
+# Pertemuan 9 & Praktikum 9
 
-
-    Introduction to Node.js
+    Introduction to JavaScript and ES6
