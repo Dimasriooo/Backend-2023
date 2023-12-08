@@ -1,3 +1,3 @@
-# Pertemuan 9 & Praktikum 9
+# Praktikum 10 & Tugas 3
 
-    Introduction to JavaScript and ES6
+    Asynchronous Programming JavaScript
