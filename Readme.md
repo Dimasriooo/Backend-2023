@@ -1,5 +1,3 @@
-# BACKEND_2023
+# Praktikum 10 & Tugas 10
 
-  NAMA : DIMAS RIO ADISAPUTRA <br>
-  ROMBEL : TI05/SE01 <br>
-  NIM : 0110222239
+    Asynchronous Programming JavaScript
